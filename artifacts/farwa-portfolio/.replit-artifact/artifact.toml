@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Farwa Khan Portfolio"
+description = "A polished personal portfolio for Farwa Khan, an AI Automation Engineer specializing in voice agents, healthcare workflows, and intelligent automation."
+version = "1.0.0"
+id = "artifacts/farwa-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19329
+
+[services.development]
+run = "pnpm --filter @workspace/farwa-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/farwa-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/farwa-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19329"
+BASE_PATH = "/"

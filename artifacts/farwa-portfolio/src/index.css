@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --background: 41 38% 94%;
+  --foreground: 222 37% 15%;
+  --border: 39 19% 82%;
+  --input: 39 19% 82%;
+  --ring: 174 63% 38%;
+  --card: 42 42% 97%;
+  --card-foreground: 222 37% 15%;
+  --card-border: 39 19% 82%;
+  --primary: 174 63% 31%;
+  --primary-foreground: 43 40% 96%;
+  --secondary: 217 30% 92%;
+  --secondary-foreground: 222 37% 15%;
+  --muted: 39 20% 88%;
+  --muted-foreground: 220 14% 42%;
+  --accent: 16 73% 57%;
+  --accent-foreground: 222 37% 15%;
+  --destructive: 3 62% 46%;
+  --destructive-foreground: 43 40% 96%;
+  --app-font-sans: 'DM Sans', sans-serif;
+  --app-font-serif: 'Instrument Serif', serif;
+  --app-font-mono: 'DM Mono', monospace;
+  --radius: 0.75rem;
+  --shadow-sm: 0 6px 16px rgba(36, 48, 62, 0.08);
+  --shadow-md: 0 18px 48px rgba(36, 48, 62, 0.12);
+}
+
+.dark {
+  --background: 222 37% 10%;
+  --foreground: 41 38% 94%;
+  --border: 220 17% 24%;
+  --input: 220 17% 24%;
+  --ring: 174 63% 45%;
+  --card: 222 30% 14%;
+  --card-foreground: 41 38% 94%;
+  --card-border: 220 17% 24%;
+  --primary: 174 63% 45%;
+  --primary-foreground: 222 37% 10%;
+  --secondary: 220 17% 22%;
+  --secondary-foreground: 41 38% 94%;
+  --muted: 220 17% 20%;
+  --muted-foreground: 220 12% 68%;
+  --accent: 16 73% 57%;
+  --accent-foreground: 222 37% 10%;
+  --destructive: 3 62% 52%;
+  --destructive-foreground: 41 38% 94%;
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    background-image: radial-gradient(rgba(36, 48, 62, 0.045) 0.8px, transparent 0.8px);
+    background-size: 12px 12px;
+  }
+  ::selection { background: hsl(var(--accent) / 0.25); }
+}
+
+@layer utilities {
+  .font-display { font-family: var(--app-font-serif); }
+  .font-mono-custom { font-family: var(--app-font-mono); }
+  .text-balance { text-wrap: balance; }
+}
+
+.site-shell { overflow: clip; }
+.container-wide { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+.hairline { height: 1px; background: hsl(var(--foreground) / 0.16); }
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1);
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+.delay-1 { transition-delay: .08s; }
+.delay-2 { transition-delay: .16s; }
+.delay-3 { transition-delay: .24s; }
+.delay-4 { transition-delay: .32s; }
+
+.nav-link { position: relative; }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -6px;
+  height: 1px;
+  background: hsl(var(--accent));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .25s ease;
+}
+.nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); transform-origin: left; }
+
+.hero-grid {
+  background-image: linear-gradient(hsl(var(--foreground) / .055) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--foreground) / .055) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+.portrait-frame {
+  box-shadow: 18px 18px 0 hsl(var(--accent) / .88);
+  transform: rotate(2.5deg);
+  transition: transform .5s cubic-bezier(.22,1,.36,1), box-shadow .5s ease;
+}
+.portrait-frame:hover { transform: rotate(0deg) translate(-3px,-3px); box-shadow: 24px 24px 0 hsl(var(--accent) / .88); }
+.project-card { transition: transform .4s cubic-bezier(.22,1,.36,1), box-shadow .4s ease; }
+.project-card:hover { transform: translateY(-7px); box-shadow: var(--shadow-md); }
+.project-card .project-arrow { transition: transform .3s ease; }
+.project-card:hover .project-arrow { transform: translate(4px,-4px); }
+.marquee-track { animation: marquee 24s linear infinite; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@keyframes float { 0%,100% { transform: translateY(0) rotate(-6deg); } 50% { transform: translateY(-9px) rotate(-3deg); } }
+.floating-mark { animation: float 5s ease-in-out infinite; }
+
+@media (max-width: 767px) {
+  .container-wide { width: min(100% - 32px, 1180px); }
+  .hero-grid { background-size: 40px 40px; }
+  .portrait-frame { box-shadow: 10px 10px 0 hsl(var(--accent) / .88); }
+  .portrait-frame:hover { box-shadow: 12px 12px 0 hsl(var(--accent) / .88); }
+}
