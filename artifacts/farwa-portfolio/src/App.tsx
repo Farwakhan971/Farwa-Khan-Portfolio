@@ -1,5 +1,5 @@
 import { useEffect, useState, type ReactNode } from 'react';
-import { ArrowDown, ArrowRight, ArrowUpRight, Bot, Check, Code2, Download, ExternalLink, Linkedin, Menu, Phone, Scissors, Stethoscope, Workflow, X } from 'lucide-react';
+import { ArrowDown, ArrowRight, ArrowUpRight, Bot, Check, Code2, Download, Linkedin, Menu, Phone, Scissors, Stethoscope, Workflow, X } from 'lucide-react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
@@ -14,6 +14,7 @@ const queryClient = new QueryClient();
 const healthcareDemoUrl = 'https://www.youtube.com/watch?v=4ANk-fuJ5bg';
 const barbershopDemoUrl = 'https://youtu.be/7yJtfv-b6WE';
 const emailAddress = 'farwakhan5673@gmail.com';
+const whatsappUrl = 'https://wa.me/923156943889?text=Hi%20Farwa%2C%20I%27d%20love%20to%20start%20a%20conversation%20about%20your%20AI%20automation%20work.';
 const linkedinUrl = 'https://www.linkedin.com/in/farwakhan';
 
 function useReveal() {
@@ -169,7 +170,6 @@ function Work() {
       <div className="container-wide">
         <div className="reveal flex flex-wrap items-end justify-between gap-7">
           <div><SectionLabel number="02">Selected experiments</SectionLabel><h2 className="font-display text-6xl tracking-[-.04em] lg:text-8xl">Work that<br /><em className="text-primary">answers back.</em></h2></div>
-          <a href={healthcareDemoUrl} target="_blank" rel="noreferrer" className="group mb-2 inline-flex items-center gap-2 border-b border-foreground/30 pb-2 font-mono-custom text-[11px] uppercase tracking-[.13em] hover:border-primary hover:text-primary" data-testid="link-work-youtube">Watch the voice demos <ExternalLink size={14} className="transition-transform group-hover:translate-x-0.5" /></a>
         </div>
         <div className="mt-16 grid gap-8 lg:grid-cols-2">
           {projects.map(({ index, icon: Icon, type, title, copy, tags, color, demoUrl }, i) => (
@@ -247,7 +247,7 @@ function Contact() {
           <h2 className="font-display text-[clamp(4.5rem,11vw,9.5rem)] leading-[.82] tracking-[-.05em]">Have a process<br />that could<br /><em className="text-primary">breathe?</em></h2>
           <p className="mt-10 max-w-[460px] text-lg leading-7 text-foreground/65">Tell me where the work gets stuck. I&apos;ll bring a notebook, a few honest questions, and a plan that starts small.</p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a href={`mailto:${emailAddress}?subject=Portfolio%20inquiry%20for%20Farwa%20Khan&body=Hi%20Farwa%2C%0A%0A`} aria-label="Email Farwa Khan to start a conversation" className="group inline-flex items-center gap-3 rounded-full bg-accent px-6 py-4 font-mono-custom text-[11px] uppercase tracking-[.13em] text-foreground transition-transform hover:-translate-y-1" data-testid="link-email-contact">
+            <a href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="Start a conversation with Farwa Khan on WhatsApp" className="group inline-flex items-center gap-3 rounded-full bg-accent px-6 py-4 font-mono-custom text-[11px] uppercase tracking-[.13em] text-foreground transition-transform hover:-translate-y-1" data-testid="link-whatsapp-contact">
               Start a conversation <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5" />
             </a>
             <a href={resumePdf} download="Farwa-Khan-Resume.pdf" className="inline-flex items-center gap-2 rounded-full border border-foreground/25 px-6 py-4 font-mono-custom text-[11px] uppercase tracking-[.13em] transition-colors hover:border-primary hover:text-primary" data-testid="link-resume-contact"><Download size={14} /> Resume</a>
