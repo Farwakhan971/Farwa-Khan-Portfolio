@@ -1,5 +1,5 @@
 import { useEffect, useState, type ReactNode } from 'react';
-import { ArrowDown, ArrowRight, ArrowUpRight, Bot, Check, Code2, Download, ExternalLink, Linkedin, Menu, Phone, Play, Scissors, Stethoscope, Workflow, X } from 'lucide-react';
+import { ArrowDown, ArrowRight, ArrowUpRight, Bot, Check, Code2, Download, ExternalLink, Linkedin, Menu, Phone, Scissors, Stethoscope, Workflow, X } from 'lucide-react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
@@ -11,7 +11,8 @@ import resumePdf from '@assets/farwa-khan-resume.pdf';
 
 const queryClient = new QueryClient();
 
-const demoUrl = 'https://youtu.be/7yJtfv-b6';
+const healthcareDemoUrl = 'https://www.youtube.com/watch?v=4ANk-fuJ5bg';
+const barbershopDemoUrl = 'https://youtu.be/7yJtfv-b6WE';
 const emailAddress = 'farwakhan5673@gmail.com';
 const linkedinUrl = 'https://www.linkedin.com/in/farwakhan';
 
@@ -101,9 +102,6 @@ function Hero() {
             <a href="#work" className="group inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3.5 font-mono-custom text-[11px] uppercase tracking-[.13em] text-primary-foreground transition-transform hover:-translate-y-1" data-testid="link-hero-work">
               See selected work <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
             </a>
-            <a href={demoUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-foreground/25 px-6 py-3.5 font-mono-custom text-[11px] uppercase tracking-[.13em] transition-colors hover:border-primary hover:text-primary" data-testid="link-hero-demo">
-              <Play size={13} fill="currentColor" /> Hear the agents
-            </a>
           </div>
         </div>
         <div className="reveal delay-2 relative mx-auto w-full max-w-[400px] lg:mr-5">
@@ -163,18 +161,18 @@ function About() {
 
 function Work() {
   const projects = [
-    { index: '01', icon: Stethoscope, type: 'Healthcare · Voice agent', title: 'AI Receptionist / AI Healthcare Voice Assistant', copy: 'A calm, conversational front door for patient questions, appointment flows, and the small details that keep care moving.', tags: ['Voice AI', 'RAG', 'REST APIs'], color: 'bg-[#dce9e2]' },
-    { index: '02', icon: Scissors, type: 'Service business · Voice agent', title: 'Barbershops / AI Voice Assistant', copy: 'A 24/7 receptionist that answers naturally, understands availability, and turns a missed call into a booked chair.', tags: ['Voice AI', 'n8n', 'Webhooks'], color: 'bg-[#f2dfd4]' },
+    { index: '01', icon: Stethoscope, type: 'Healthcare · Voice agent', title: 'AI Receptionist / AI Healthcare Voice Assistant', copy: 'A calm, conversational front door for patient questions, appointment flows, and the small details that keep care moving.', tags: ['Voice AI', 'RAG', 'REST APIs'], color: 'bg-[#dce9e2]', demoUrl: healthcareDemoUrl },
+    { index: '02', icon: Scissors, type: 'Service business · Voice agent', title: 'Barbershops / AI Voice Assistant', copy: 'A 24/7 receptionist that answers naturally, understands availability, and turns a missed call into a booked chair.', tags: ['Voice AI', 'n8n', 'Webhooks'], color: 'bg-[#f2dfd4]', demoUrl: barbershopDemoUrl },
   ];
   return (
     <section id="work" className="border-b border-foreground/10 py-24 lg:py-32">
       <div className="container-wide">
         <div className="reveal flex flex-wrap items-end justify-between gap-7">
           <div><SectionLabel number="02">Selected experiments</SectionLabel><h2 className="font-display text-6xl tracking-[-.04em] lg:text-8xl">Work that<br /><em className="text-primary">answers back.</em></h2></div>
-          <a href={demoUrl} target="_blank" rel="noreferrer" className="group mb-2 inline-flex items-center gap-2 border-b border-foreground/30 pb-2 font-mono-custom text-[11px] uppercase tracking-[.13em] hover:border-primary hover:text-primary" data-testid="link-work-youtube">Watch the voice demos <ExternalLink size={14} className="transition-transform group-hover:translate-x-0.5" /></a>
+          <a href={healthcareDemoUrl} target="_blank" rel="noreferrer" className="group mb-2 inline-flex items-center gap-2 border-b border-foreground/30 pb-2 font-mono-custom text-[11px] uppercase tracking-[.13em] hover:border-primary hover:text-primary" data-testid="link-work-youtube">Watch the voice demos <ExternalLink size={14} className="transition-transform group-hover:translate-x-0.5" /></a>
         </div>
         <div className="mt-16 grid gap-8 lg:grid-cols-2">
-          {projects.map(({ index, icon: Icon, type, title, copy, tags, color }, i) => (
+          {projects.map(({ index, icon: Icon, type, title, copy, tags, color, demoUrl }, i) => (
             <article key={title} className={`project-card reveal delay-${i + 1} ${color} group relative min-h-[420px] overflow-hidden rounded-[1.5rem] p-7 md:p-10`} data-testid={`card-project-${index}`}>
               <div className="flex items-start justify-between">
                 <span className="font-mono-custom text-[10px] uppercase tracking-[.17em] text-foreground/55">{index} / 02</span>
@@ -213,7 +211,6 @@ function Experience() {
             </div>
             <p className="mt-8 max-w-[620px] text-sm leading-7 text-foreground/65">Designing and shipping practical AI systems for businesses that need their operations to move faster without losing the human touch.</p>
           </div>
-          <div className="mt-12"><p className="font-mono-custom text-[10px] uppercase tracking-[.16em] text-foreground/45">Education</p><div className="mt-5 flex flex-wrap items-start justify-between gap-5"><div><h3 className="text-xl font-semibold">BS Software Engineering</h3><p className="mt-2 text-sm text-foreground/60">COMSATS University Islamabad, Vehari Campus</p></div><span className="font-mono-custom text-xs text-accent">CGPA 3.81 / 4.0</span></div></div>
         </div>
       </div>
     </section>
@@ -250,7 +247,7 @@ function Contact() {
           <h2 className="font-display text-[clamp(4.5rem,11vw,9.5rem)] leading-[.82] tracking-[-.05em]">Have a process<br />that could<br /><em className="text-primary">breathe?</em></h2>
           <p className="mt-10 max-w-[460px] text-lg leading-7 text-foreground/65">Tell me where the work gets stuck. I&apos;ll bring a notebook, a few honest questions, and a plan that starts small.</p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a href={`mailto:${emailAddress}`} className="group inline-flex items-center gap-3 rounded-full bg-accent px-6 py-4 font-mono-custom text-[11px] uppercase tracking-[.13em] text-foreground transition-transform hover:-translate-y-1" data-testid="link-email-contact">
+            <a href={`mailto:${emailAddress}?subject=Portfolio%20inquiry%20for%20Farwa%20Khan&body=Hi%20Farwa%2C%0A%0A`} aria-label="Email Farwa Khan to start a conversation" className="group inline-flex items-center gap-3 rounded-full bg-accent px-6 py-4 font-mono-custom text-[11px] uppercase tracking-[.13em] text-foreground transition-transform hover:-translate-y-1" data-testid="link-email-contact">
               Start a conversation <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5" />
             </a>
             <a href={resumePdf} download="Farwa-Khan-Resume.pdf" className="inline-flex items-center gap-2 rounded-full border border-foreground/25 px-6 py-4 font-mono-custom text-[11px] uppercase tracking-[.13em] transition-colors hover:border-primary hover:text-primary" data-testid="link-resume-contact"><Download size={14} /> Resume</a>
