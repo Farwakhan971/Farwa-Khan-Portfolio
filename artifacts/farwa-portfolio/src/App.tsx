@@ -142,7 +142,7 @@ function About() {
           <p className="font-display text-4xl leading-[1] tracking-[-.02em] text-foreground lg:text-5xl">Automation should solve a business problem, not create another tool to manage.</p>
         </div>
         <div>
-          <p className="reveal delay-1 max-w-[620px] text-[clamp(1.25rem,2.4vw,2rem)] leading-[1.35] tracking-[-.015em] text-foreground/85">
+          <p className="reveal delay-1 max-w-[620px] text-[clamp(1.2rem,2.1vw,1.75rem)] leading-[1.4] tracking-[-.012em] text-foreground/85">
             I map where leads get lost, teams repeat themselves, or customers wait too long - then design AI agents and workflows that connect the right systems and move the next action forward.
           </p>
           <div className="mt-14 grid gap-8 border-t border-foreground/15 pt-7 md:grid-cols-3">
