@@ -1,1 +1,2 @@
 - [pino-http deployment typing](pino-http-deployment-typing.md) — use the named export and explicit HTTP serializer types for deployment-safe TypeScript checks.
+- [Vite build environment](vite-build-environment.md) — require runtime env vars for dev servers, but use safe defaults during static production builds.
