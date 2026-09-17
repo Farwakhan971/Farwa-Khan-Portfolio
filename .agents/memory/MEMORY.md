@@ -1,0 +1,1 @@
+- [pino-http deployment typing](pino-http-deployment-typing.md) — use the named export and explicit HTTP serializer types for deployment-safe TypeScript checks.
