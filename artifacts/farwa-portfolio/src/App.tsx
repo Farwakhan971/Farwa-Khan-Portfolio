@@ -206,7 +206,7 @@ function Experience() {
         <div className="reveal delay-1">
           <div className="border-y border-foreground/20 py-7">
             <div className="flex flex-wrap items-start justify-between gap-5">
-              <div><p className="font-mono-custom text-[10px] uppercase tracking-[.16em] text-primary">Nov 2025 - Present</p><h3 className="mt-3 text-2xl font-semibold">AI Automation Engineer <span className="font-normal text-foreground/45">(Freelance, Remote)</span></h3><p className="mt-2 text-sm text-foreground/60">Torta · Dubai, UAE</p></div>
+              <div><p className="font-mono-custom text-[10px] uppercase tracking-[.16em] text-primary">Nov 2025 - September 2026</p><h3 className="mt-3 text-2xl font-semibold">AI Automation Engineer <span className="font-normal text-foreground/45">(Freelance, Remote)</span></h3><p className="mt-2 text-sm text-foreground/60">Torta · Dubai, UAE</p></div>
               <span className="rounded-full border border-primary/30 px-3 py-1 font-mono-custom text-[10px] uppercase tracking-[.12em] text-primary">Freelance</span>
             </div>
             <p className="mt-8 max-w-[620px] text-sm leading-7 text-foreground/65">Designed AI-powered automation solutions that reduce repetitive manual work, keep leads moving from capture to follow-up, and connect business systems through APIs, webhooks, LLMs, and n8n workflows.</p>
