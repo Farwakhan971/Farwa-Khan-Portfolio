@@ -91,13 +91,13 @@ function Hero() {
         <div className="relative z-10">
           <div className="reveal flex items-center gap-3 font-mono-custom text-[11px] uppercase tracking-[.2em] text-primary">
             <span className="h-2 w-2 animate-pulse rounded-full bg-accent" />
-            Available for thoughtful collaborations
+            AI automation engineer · remote / global
           </div>
           <h1 className="reveal delay-1 mt-7 max-w-[720px] text-balance font-display text-[clamp(4.8rem,11vw,9.6rem)] leading-[.82] tracking-[-.045em] text-foreground">
-            I make<br /><em className="text-primary">busy</em> work<br />disappear.
+            I turn<br /><em className="text-primary">busywork</em><br />into momentum.
           </h1>
           <p className="reveal delay-2 mt-9 max-w-[470px] text-lg leading-8 text-foreground/70">
-            I&apos;m Farwa Khan, an AI Automation Engineer building practical voice agents and workflows for healthcare and service businesses.
+            I&apos;m Farwa Khan, an AI Automation Engineer helping businesses reduce repetitive work, capture more leads, and create smoother customer experiences with AI agents and connected workflows.
           </p>
           <div className="reveal delay-3 mt-9 flex flex-wrap items-center gap-4">
             <a href="#work" className="group inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3.5 font-mono-custom text-[11px] uppercase tracking-[.13em] text-primary-foreground transition-transform hover:-translate-y-1" data-testid="link-hero-work">
@@ -130,20 +130,20 @@ function Hero() {
 
 function About() {
   const principles = [
-    ['01', 'Start with the friction', 'Before choosing a model, I find the moment where a team loses time, context, or patience.'],
-    ['02', 'Make it feel obvious', 'Good automation is quiet. The best interface is the task that no longer needs explaining.'],
-    ['03', 'Keep a human close', 'People should always know what the system did, why it did it, and where they can step in.'],
+    ['01', 'Find the costly friction', 'Before choosing a model, I find the moment where a team loses time, leads, context, or patience.'],
+    ['02', 'Connect the workflow', 'I bring APIs, webhooks, LLMs, and business tools together so repetitive work keeps moving automatically.'],
+    ['03', 'Keep a human close', 'The system handles repeatable work, while people stay in control of the moments that need judgment.'],
   ];
   return (
     <section id="about" className="border-b border-foreground/10 py-24 lg:py-32">
       <div className="container-wide grid gap-14 lg:grid-cols-[.7fr_1.3fr]">
         <div className="reveal">
           <SectionLabel number="01">A little context</SectionLabel>
-          <p className="font-display text-5xl leading-[.95] tracking-[-.025em] text-foreground lg:text-6xl">Technology should feel like a good colleague.</p>
+          <p className="font-display text-5xl leading-[.95] tracking-[-.025em] text-foreground lg:text-6xl">Automation should solve a business problem, not create another tool to manage.</p>
         </div>
         <div>
           <p className="reveal delay-1 max-w-[660px] text-[clamp(1.5rem,3vw,2.4rem)] leading-[1.2] tracking-[-.025em] text-foreground/85">
-            Not another dashboard to babysit. Not a black box that makes promises. I build the connective tissue between a customer&apos;s question and a team&apos;s best next action.
+            I map where leads get lost, teams repeat themselves, or customers wait too long — then design AI agents and workflows that connect the right systems and move the next action forward.
           </p>
           <div className="mt-14 grid gap-8 border-t border-foreground/15 pt-7 md:grid-cols-3">
             {principles.map(([number, title, body], index) => (
@@ -162,8 +162,8 @@ function About() {
 
 function Work() {
   const projects = [
-    { index: '01', icon: Stethoscope, type: 'Healthcare · Voice agent', title: 'AI Receptionist / AI Healthcare Voice Assistant', copy: 'A calm, conversational front door for patient questions, appointment flows, and the small details that keep care moving.', tags: ['Voice AI', 'RAG', 'REST APIs'], color: 'bg-[#dce9e2]', demoUrl: healthcareDemoUrl },
-    { index: '02', icon: Scissors, type: 'Service business · Voice agent', title: 'Barbershops / AI Voice Assistant', copy: 'A 24/7 receptionist that answers naturally, understands availability, and turns a missed call into a booked chair.', tags: ['Voice AI', 'n8n', 'Webhooks'], color: 'bg-[#f2dfd4]', demoUrl: barbershopDemoUrl },
+    { index: '01', icon: Stethoscope, type: 'Healthcare operations · Voice agent', title: 'AI Receptionist / AI Healthcare Voice Assistant', copy: 'A conversational front door for patient questions, information capture, appointment requests, and the handoffs that keep clinic teams moving.', tags: ['Voice AI', 'Vapi', 'MCP Servers'], color: 'bg-[#dce9e2]', demoUrl: healthcareDemoUrl },
+    { index: '02', icon: Scissors, type: 'Customer operations · Voice agent', title: 'Barbershops / AI Voice Assistant', copy: 'A 24/7 receptionist that answers service questions, checks availability, captures customer details, and turns missed calls into booked appointments.', tags: ['Voice AI', 'n8n', 'Webhooks'], color: 'bg-[#f2dfd4]', demoUrl: barbershopDemoUrl },
   ];
   return (
     <section id="work" className="border-b border-foreground/10 py-24 lg:py-32">
@@ -206,10 +206,10 @@ function Experience() {
         <div className="reveal delay-1">
           <div className="border-y border-foreground/20 py-7">
             <div className="flex flex-wrap items-start justify-between gap-5">
-              <div><p className="font-mono-custom text-[10px] uppercase tracking-[.16em] text-primary">Nov 2025 — Present</p><h3 className="mt-3 text-2xl font-semibold">AI Automation Engineer <span className="font-normal text-foreground/45">(Contract)</span></h3><p className="mt-2 text-sm text-foreground/60">Torta · Remote, UAE</p></div>
-              <span className="rounded-full border border-primary/30 px-3 py-1 font-mono-custom text-[10px] uppercase tracking-[.12em] text-primary">Current</span>
+              <div><p className="font-mono-custom text-[10px] uppercase tracking-[.16em] text-primary">Nov 2025 — Sep 2026</p><h3 className="mt-3 text-2xl font-semibold">AI Automation Engineer <span className="font-normal text-foreground/45">(Freelance, Remote)</span></h3><p className="mt-2 text-sm text-foreground/60">Torta · Dubai, UAE</p></div>
+              <span className="rounded-full border border-primary/30 px-3 py-1 font-mono-custom text-[10px] uppercase tracking-[.12em] text-primary">Freelance</span>
             </div>
-            <p className="mt-8 max-w-[620px] text-sm leading-7 text-foreground/65">Designing and shipping practical AI systems for businesses that need their operations to move faster without losing the human touch.</p>
+            <p className="mt-8 max-w-[620px] text-sm leading-7 text-foreground/65">Designed AI-powered automation solutions that reduce repetitive manual work, keep leads moving from capture to follow-up, and connect business systems through APIs, webhooks, LLMs, and n8n workflows.</p>
           </div>
         </div>
       </div>
@@ -218,7 +218,7 @@ function Experience() {
 }
 
 function Toolkit() {
-  const skills = ['Python', 'JavaScript', 'Node.js', 'n8n', 'AI Agents', 'Prompt Engineering', 'LLM Integration', 'AI APIs', 'RAG', 'REST APIs', 'Webhooks', 'JSON', 'Postman', 'Git', 'GitHub', 'Notion', 'Slack', 'MongoDB', 'MySQL', 'WebSockets', 'SSE'];
+  const skills = ['Python', 'JavaScript', 'Node.js', 'n8n', 'AI Automation', 'AI Agents', 'Prompt Engineering', 'LLM Integration', 'Workflow Automation', 'RAG', 'Vapi', 'MCP Servers', 'RESTful APIs', 'Webhooks', 'MongoDB', 'MySQL', 'WebSockets', 'SSE'];
   return (
     <section className="border-b border-foreground/10 bg-foreground py-24 text-background lg:py-28">
       <div className="container-wide grid gap-14 lg:grid-cols-[.7fr_1.3fr]">
@@ -228,9 +228,9 @@ function Toolkit() {
             {skills.map((skill, index) => <span key={skill} className={`rounded-full border px-3.5 py-2 font-mono-custom text-[11px] transition-colors hover:border-accent hover:text-accent ${index < 5 ? 'border-accent/55 text-background' : 'border-background/20 text-background/65'}`} data-testid={`text-skill-${index}`}>{skill}</span>)}
           </div>
           <div className="mt-14 grid gap-6 border-t border-background/20 pt-7 text-sm text-background/55 sm:grid-cols-3">
-            <div className="flex gap-3"><Bot size={18} className="shrink-0 text-accent" /><span>Agents that understand context</span></div>
-            <div className="flex gap-3"><Workflow size={18} className="shrink-0 text-accent" /><span>Workflows that carry their weight</span></div>
-            <div className="flex gap-3"><Code2 size={18} className="shrink-0 text-accent" /><span>APIs that connect the dots</span></div>
+            <div className="flex gap-3"><Bot size={18} className="shrink-0 text-accent" /><span>Agents that understand customer context</span></div>
+            <div className="flex gap-3"><Workflow size={18} className="shrink-0 text-accent" /><span>Workflows that reduce manual work</span></div>
+            <div className="flex gap-3"><Code2 size={18} className="shrink-0 text-accent" /><span>Systems that keep leads moving</span></div>
           </div>
         </div>
       </div>
@@ -245,7 +245,7 @@ function Contact() {
         <div className="reveal max-w-[820px]">
           <SectionLabel number="05">Let&apos;s make room</SectionLabel>
           <h2 className="font-display text-[clamp(4.5rem,11vw,9.5rem)] leading-[.82] tracking-[-.05em]">Have a process<br />that could<br /><em className="text-primary">breathe?</em></h2>
-          <p className="mt-10 max-w-[460px] text-lg leading-7 text-foreground/65">Tell me where the work gets stuck. I&apos;ll bring a notebook, a few honest questions, and a plan that starts small.</p>
+          <p className="mt-10 max-w-[460px] text-lg leading-7 text-foreground/65">Tell me where leads get lost, customers wait, or your team repeats the same work. I&apos;ll help you find the smallest useful automation to start with.</p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="Start a conversation with Farwa Khan on WhatsApp" className="group inline-flex items-center gap-3 rounded-full bg-accent px-6 py-4 font-mono-custom text-[11px] uppercase tracking-[.13em] text-foreground transition-transform hover:-translate-y-1" data-testid="link-whatsapp-contact">
               Start a conversation <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5" />
