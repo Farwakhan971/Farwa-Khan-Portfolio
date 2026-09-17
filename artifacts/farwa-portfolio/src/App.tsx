@@ -93,7 +93,7 @@ function Hero() {
             <span className="h-2 w-2 animate-pulse rounded-full bg-accent" />
             AI automation engineer · remote / global
           </div>
-          <h1 className="reveal delay-1 mt-7 max-w-[720px] text-balance font-display text-[clamp(4.8rem,11vw,9.6rem)] leading-[.82] tracking-[-.045em] text-foreground">
+          <h1 className="reveal delay-1 mt-7 max-w-[720px] text-balance font-display text-[clamp(4.4rem,9vw,8.25rem)] leading-[.86] tracking-[-.045em] text-foreground">
             I turn<br /><em className="text-primary">busywork</em><br />into momentum.
           </h1>
           <p className="reveal delay-2 mt-9 max-w-[470px] text-lg leading-8 text-foreground/70">
@@ -114,7 +114,7 @@ function Hero() {
           </div>
           <div className="mt-5 flex items-end justify-between border-t border-foreground/20 pt-4">
             <span className="font-mono-custom text-[10px] uppercase tracking-[.17em] text-foreground/55">Based in Pakistan<br />Working globally</span>
-            <span className="font-display text-3xl italic text-primary">01—05</span>
+            <span className="font-display text-3xl italic text-primary">01-05</span>
           </div>
         </div>
       </div>
@@ -139,11 +139,11 @@ function About() {
       <div className="container-wide grid gap-14 lg:grid-cols-[.7fr_1.3fr]">
         <div className="reveal">
           <SectionLabel number="01">A little context</SectionLabel>
-          <p className="font-display text-5xl leading-[.95] tracking-[-.025em] text-foreground lg:text-6xl">Automation should solve a business problem, not create another tool to manage.</p>
+          <p className="font-display text-4xl leading-[1] tracking-[-.02em] text-foreground lg:text-5xl">Automation should solve a business problem, not create another tool to manage.</p>
         </div>
         <div>
-          <p className="reveal delay-1 max-w-[660px] text-[clamp(1.5rem,3vw,2.4rem)] leading-[1.2] tracking-[-.025em] text-foreground/85">
-            I map where leads get lost, teams repeat themselves, or customers wait too long — then design AI agents and workflows that connect the right systems and move the next action forward.
+          <p className="reveal delay-1 max-w-[620px] text-[clamp(1.25rem,2.4vw,2rem)] leading-[1.35] tracking-[-.015em] text-foreground/85">
+            I map where leads get lost, teams repeat themselves, or customers wait too long - then design AI agents and workflows that connect the right systems and move the next action forward.
           </p>
           <div className="mt-14 grid gap-8 border-t border-foreground/15 pt-7 md:grid-cols-3">
             {principles.map(([number, title, body], index) => (
@@ -169,7 +169,7 @@ function Work() {
     <section id="work" className="border-b border-foreground/10 py-24 lg:py-32">
       <div className="container-wide">
         <div className="reveal flex flex-wrap items-end justify-between gap-7">
-          <div><SectionLabel number="02">Selected experiments</SectionLabel><h2 className="font-display text-6xl tracking-[-.04em] lg:text-8xl">Work that<br /><em className="text-primary">answers back.</em></h2></div>
+          <div><SectionLabel number="02">Selected experiments</SectionLabel><h2 className="font-display text-5xl tracking-[-.04em] lg:text-7xl">Work that<br /><em className="text-primary">answers back.</em></h2></div>
         </div>
         <div className="mt-16 grid gap-8 lg:grid-cols-2">
           {projects.map(({ index, icon: Icon, type, title, copy, tags, color, demoUrl }, i) => (
@@ -181,7 +181,7 @@ function Work() {
               <div className="absolute -bottom-16 -right-10 font-display text-[15rem] leading-none text-foreground/[.045]">{index}</div>
               <div className="relative mt-24 max-w-[450px]">
                 <p className="font-mono-custom text-[10px] uppercase tracking-[.16em] text-primary">{type}</p>
-                <h3 className="mt-3 font-display text-5xl leading-[.92] tracking-[-.035em] md:text-6xl">{title}</h3>
+                <h3 className="mt-3 font-display text-4xl leading-[.96] tracking-[-.03em] md:text-5xl">{title}</h3>
                 <p className="mt-5 max-w-[420px] text-sm leading-6 text-foreground/65">{copy}</p>
                 <div className="mt-7 flex flex-wrap gap-2">
                   {tags.map(tag => <span key={tag} className="rounded-full border border-foreground/20 px-3 py-1.5 font-mono-custom text-[10px] text-foreground/65">{tag}</span>)}
@@ -202,11 +202,11 @@ function Experience() {
   return (
     <section id="experience" className="border-b border-foreground/10 py-24 lg:py-32">
       <div className="container-wide grid gap-14 lg:grid-cols-[.7fr_1.3fr]">
-        <div className="reveal"><SectionLabel number="03">The path so far</SectionLabel><h2 className="max-w-[300px] font-display text-6xl leading-[.9] tracking-[-.04em]">Built for the <em className="text-primary">real world.</em></h2></div>
+        <div className="reveal"><SectionLabel number="03">The path so far</SectionLabel><h2 className="max-w-[300px] font-display text-5xl leading-[.94] tracking-[-.04em] lg:text-6xl">Built for the <em className="text-primary">real world.</em></h2></div>
         <div className="reveal delay-1">
           <div className="border-y border-foreground/20 py-7">
             <div className="flex flex-wrap items-start justify-between gap-5">
-              <div><p className="font-mono-custom text-[10px] uppercase tracking-[.16em] text-primary">Nov 2025 — Sep 2026</p><h3 className="mt-3 text-2xl font-semibold">AI Automation Engineer <span className="font-normal text-foreground/45">(Freelance, Remote)</span></h3><p className="mt-2 text-sm text-foreground/60">Torta · Dubai, UAE</p></div>
+              <div><p className="font-mono-custom text-[10px] uppercase tracking-[.16em] text-primary">Nov 2025 - Sep 2026</p><h3 className="mt-3 text-2xl font-semibold">AI Automation Engineer <span className="font-normal text-foreground/45">(Freelance, Remote)</span></h3><p className="mt-2 text-sm text-foreground/60">Torta · Dubai, UAE</p></div>
               <span className="rounded-full border border-primary/30 px-3 py-1 font-mono-custom text-[10px] uppercase tracking-[.12em] text-primary">Freelance</span>
             </div>
             <p className="mt-8 max-w-[620px] text-sm leading-7 text-foreground/65">Designed AI-powered automation solutions that reduce repetitive manual work, keep leads moving from capture to follow-up, and connect business systems through APIs, webhooks, LLMs, and n8n workflows.</p>
@@ -222,7 +222,7 @@ function Toolkit() {
   return (
     <section className="border-b border-foreground/10 bg-foreground py-24 text-background lg:py-28">
       <div className="container-wide grid gap-14 lg:grid-cols-[.7fr_1.3fr]">
-        <div className="reveal"><SectionLabel number="04">Working toolkit</SectionLabel><h2 className="font-display text-6xl leading-[.88] tracking-[-.04em]">The pieces<br />behind the <em className="text-accent">magic.</em></h2></div>
+        <div className="reveal"><SectionLabel number="04">Working toolkit</SectionLabel><h2 className="font-display text-5xl leading-[.94] tracking-[-.04em] lg:text-6xl">The pieces<br />behind the <em className="text-accent">magic.</em></h2></div>
         <div className="reveal delay-1">
           <div className="flex flex-wrap gap-2.5">
             {skills.map((skill, index) => <span key={skill} className={`rounded-full border px-3.5 py-2 font-mono-custom text-[11px] transition-colors hover:border-accent hover:text-accent ${index < 5 ? 'border-accent/55 text-background' : 'border-background/20 text-background/65'}`} data-testid={`text-skill-${index}`}>{skill}</span>)}
@@ -244,7 +244,7 @@ function Contact() {
       <div className="container-wide">
         <div className="reveal max-w-[820px]">
           <SectionLabel number="05">Let&apos;s make room</SectionLabel>
-          <h2 className="font-display text-[clamp(4.5rem,11vw,9.5rem)] leading-[.82] tracking-[-.05em]">Have a process<br />that could<br /><em className="text-primary">breathe?</em></h2>
+          <h2 className="font-display text-[clamp(4rem,9vw,7.75rem)] leading-[.86] tracking-[-.05em]">Have a process<br />that could<br /><em className="text-primary">breathe?</em></h2>
           <p className="mt-10 max-w-[460px] text-lg leading-7 text-foreground/65">Tell me where leads get lost, customers wait, or your team repeats the same work. I&apos;ll help you find the smallest useful automation to start with.</p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="Start a conversation with Farwa Khan on WhatsApp" className="group inline-flex items-center gap-3 rounded-full bg-accent px-6 py-4 font-mono-custom text-[11px] uppercase tracking-[.13em] text-foreground transition-transform hover:-translate-y-1" data-testid="link-whatsapp-contact">
